@@ -1,9 +1,14 @@
 # Project Created by Group-6
 
-<br><br>
 
+## Website Link 🧮
+This site is deployed at
+|----|
+| [Java-Website-Creation-KIIT-Project](https://blamerx.github.io/Java-Website-Creation-KIIT-Project/) |
 
-## Run Locally
+<br>
+
+## Run Locally 🖥️
 
 Clone the project
 
@@ -20,7 +25,7 @@ Go to the project directory
 <br><br>
 
 
-## Deployment
+## Deployment 💻
 
 To deploy this project run
 
@@ -31,16 +36,16 @@ To deploy this project run
 <br><br>
 
 
-## Screenshots
+## Screenshots 📸
 
 ![Website Screenshot](https://github.com/BlamerX/Java-Website-Creation-KIIT-Project/blob/master/img/Sample.jpg)
 
 <br><br>
 
-## Group Members
+## Group Members 💯
 
-| Roll No | Name                                                     |
-| ------- | -------------------------------------------------------- |
+| Roll No | Name |
+| ------- | ----- |
 | 2029042 | [Abhinav](https://github.com/)  |
 | 2029181 | [Jogender](https://github.com/) |
 | 2029187 | [Aniket](https://github.com/)   |
@@ -50,12 +55,12 @@ To deploy this project run
 <br><br>
 
 
-## Logo
+## Logo 💫
 ![Logo](https://cdn.kiit.ac.in/main/2017/12/13193456/KIIT-Logo-New.png)
 
 
 <br><br>
 
-## 🛠 Skills
+##  Skills 🛠
 
 HTML, CSS
