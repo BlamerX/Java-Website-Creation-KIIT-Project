@@ -1,0 +1,114 @@
+body {
+  font-family: Arial;
+  background-color: rgb(248, 66, 66);
+  text-align: center;
+  align-items: center;
+  background-image: url(../img/bagrount\ image.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: centre;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+hr {
+  border-color: #f05f44;
+  border-width: 3px;
+  max-width: 65%;
+  left: 0%;
+}
+
+.buffer {
+  height: 10rem;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 300px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #f05f44;
+  border-color: #f05f44;
+}
+
+.btn-primary:hover {
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px;
+  transform: scale(1.5);
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+  bottom: 20%;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.img-logo {
+  border-radius: 0.5cm;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  width: 1cm;
+  height: 1cm;
+}
+.img-logo:hover {
+  transform: scale(3);
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(700px, 2fr));
+  grid-gap: 20px;
+}
+
+.box {
+  opacity: 0.8;
+  background-color: rgb(63, 58, 58);
+  color: #ffffff;
+  padding: 50px;
+  margin: 10px;
+  transform: scale(0.8);
+}
+
+.box:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.box > img {
+  width: 100%;
+  height: auto;
+}
+
+.siteContent {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  color: crimson;
+}
+
+h5 {
+  font-size: 2rem;
+  color: crimson;
+}
+
+.person {
+  color: greenyellow;
+}
