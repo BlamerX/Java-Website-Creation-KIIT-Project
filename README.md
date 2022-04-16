@@ -1,6 +1,14 @@
 # Project Created by Group-6
 
-## Run Locally
+
+## Website Link 🧮
+This site is deployed at
+|----|
+| [Java-Website-Creation-KIIT-Project](https://blamerx.github.io/Java-Website-Creation-KIIT-Project/) |
+
+<br>
+
+## Run Locally 🖥️
 
 Clone the project
 
@@ -14,7 +22,10 @@ Go to the project directory
   cd Java-Website-Creation-KIIT-Project
 ```
 
-## Deployment
+<br><br>
+
+
+## Deployment 💻
 
 To deploy this project run
 
@@ -22,20 +33,32 @@ To deploy this project run
   index.html
 ```
 
-## Screenshots
+<br><br>
+
+
+## Screenshots 📸
 
 ![Website Screenshot](https://github.com/BlamerX/Java-Website-Creation-KIIT-Project/blob/master/img/Sample.jpg)
 
-## Group Members
+<br><br>
 
-| Roll No | Name                                                     |
-| ------- | -------------------------------------------------------- |
-| 2029042 | [Abhinav](https://via.placeholder.com/10/0a192f?text=+)  |
-| 2029181 | [Jogender](https://via.placeholder.com/10/f8f8f8?text=+) |
-| 2029187 | [Aniket](https://via.placeholder.com/10/00b48a?text=+)   |
-| 2029193 | [Ujjwal](https://via.placeholder.com/10/00b48a?text=+)   |
-| 2029196 | [Adarsh](https://github.com/BlamerX)                     |
+## Group Members 💯
 
-## 🛠 Skills
+| Roll No | Name |
+| ------- | ----- |
+| 2029042 | [Abhinav](https://github.com/)  |
+| 2029181 | [Jogender](https://github.com/) |
+| 2029187 | [Aniket](https://github.com/)   |
+| 2029193 | [Ujjwal](https://github.com/)   |
+| 2029196 | [Adarsh](https://github.com/BlamerX)   |
+
+<br><br>
+
+
+## Logo 💫
+![Logo](https://cdn.kiit.ac.in/main/2017/12/13193456/KIIT-Logo-New.png)
+
+
+##  Skills 🛠
 
 HTML, CSS
