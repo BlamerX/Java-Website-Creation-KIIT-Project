@@ -52,12 +52,13 @@ To deploy this project run
 | 2029193 | [Ujjwal](https://github.com/)   |
 | 2029196 | [Adarsh](https://github.com/BlamerX)   |
 
-<br><br>
+<br>
 
 
 ## Logo 💫
 ![Logo](https://cdn.kiit.ac.in/main/2017/12/13193456/KIIT-Logo-New.png)
 
+<br>
 
 ##  Skills 🛠
 
