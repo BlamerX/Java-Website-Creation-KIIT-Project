@@ -34,7 +34,7 @@ To deploy this project run
 | 2029181 | [Jogender](https://via.placeholder.com/10/f8f8f8?text=+) |
 | 2029187 | [Aniket](https://via.placeholder.com/10/00b48a?text=+)   |
 | 2029193 | [Ujjwal](https://via.placeholder.com/10/00b48a?text=+)   |
-| 2029196 | [Adarsh](https://via.placeholder.com/10/00b48a?text=+)   |
+| 2029196 | [Adarsh](https://github.com/BlamerX)                     |
 
 ## 🛠 Skills
 
