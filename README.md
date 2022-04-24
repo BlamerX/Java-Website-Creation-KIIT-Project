@@ -75,7 +75,7 @@ To deploy this project run
 ## Logo 💫
 
 ![Logo](https://cdn.kiit.ac.in/main/2017/12/13193456/KIIT-Logo-New.png)
-=======
+
 <br>
 
 ## Skills 🛠

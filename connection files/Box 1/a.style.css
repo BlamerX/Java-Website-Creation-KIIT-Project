@@ -1,14 +1,19 @@
 body {
   background-color: cadetblue;
+  margin: 1cm;
 }
 
 pre {
+  display: block;
   margin: 0 20%;
   background-color: rgb(75, 67, 67);
-  border: 1px solid rgb(95, 65, 65);
-  display: block;
-  height: 250px;
-  width: 650px;
+  border: 2px solid black;
+  height: fit-content;
+  width: max-content;
+}
+
+pre:hover {
+  transition: scale(1.1);
 }
 
 code {
@@ -16,9 +21,9 @@ code {
   color: rgb(90, 216, 216);
 }
 
-.first {
-  height: 330px;
-  width: 650px;
+p {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .btn {
@@ -41,4 +46,20 @@ code {
 .btn-xl {
   padding: 1rem 2rem;
   bottom: 20%;
+}
+
+.Title {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+p {
+  font-size: 2rem;
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
