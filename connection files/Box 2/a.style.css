@@ -12,18 +12,9 @@ pre {
   width: max-content;
 }
 
-pre:hover {
-  transition: scale(1.1);
-}
-
 code {
   font-size: 1rem;
   color: rgb(90, 216, 216);
-}
-
-p {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .btn {
@@ -48,13 +39,14 @@ p {
   bottom: 20%;
 }
 
-.Title {
+.title {
   text-align: center;
   text-decoration-line: underline;
 }
 
-p {
-  font-size: 2rem;
+p,
+li {
+  font-size: 1.5rem;
 }
 
 hr {
@@ -62,4 +54,12 @@ hr {
   height: 3px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
 }

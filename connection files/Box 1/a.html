@@ -6,11 +6,11 @@
 </head>
 
 <body>
-    <a href="../../index.html" target="home">
+    <a href="../../index.html#Content" target="home">
         <button class="btn btn-primary btn-xl">to home Page</button>
     </a>
 
-    <h1 class="Title">Array in Java</h1>
+    <h1 class="title">Array in Java</h1>
     <p>Normally, array is a collection of similar type of elements
         that have contiguous memory location.
     </p>
@@ -22,9 +22,23 @@
     <p> Array in java is index based, first element of the array is
         stored at 0 index.
     </p>
-    <hr>
 
-    <h1>Advantages of Java Array</h1>
+    <h2>Arrays are:</h2>
+
+    <ul style="font-size: 2rem;">
+        <li>declared</li>
+        <li>created</li>
+        <li>initialized</li>
+        <li>used</li>
+    </ul>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h1 id="advantage">Advantages of Java Array</h1>
     <ul>
         <li>
             <p>Code Optimization: It makes the code optimized, we
@@ -36,7 +50,7 @@
         </li>
     </ul>
 
-    <h1>Disadvantages of Java Array</h1>
+    <h1 id="disadvantage">Disadvantages of Java Array</h1>
     <ul>
         <li>
             <p>Size Limit: We can store only fixed size of elements in the
@@ -45,9 +59,12 @@
         </li>
     </ul>
 
+    <br>
     <hr>
+    <br>
 
-    <h1>Single Dimensional Array in Java (1-Dimensional Array)</h1>
+
+    <h1 id="single-dimensional-array">Single Dimensional Array in Java (1-Dimensional Array)</h1>
 
     <h2 style="color: crimson;">Syntax to Declare an Array in java :</h2>
     <ul>
@@ -88,6 +105,7 @@
             System.out.println(a[i]); 
         }
     }
+
 </code></pre>
     <p>eg 2:-</p>
     <pre style="width: 20cm;"><code>
@@ -98,16 +116,176 @@
             System.out.println(a[i]); 
         }
     }
+
 </code></pre>
 
+    <h1>Passing Array to method in java</h1>
+    <pre><code>
+    class Testarray{
+        static void min(int arr[]){
+            int min=arr[0];
+            for(int i=1;i<(arr.length);i++){
+                if(min>arr[i])
+                min=arr[i];
+                System.out.println(min);
+            }
+        }
+        
+        public static void main(String args[]){
+            int a[]={33,3,4,5};
+            min(a);//passing array to method        
+        }
+    }
+
+</code></pre>
+
+    <br>
     <hr>
+    <br>
+
+    <h1 id="two-dimensional-array">Two Dimensional Array in java (2-Dimensional Array)</h1>
+    <h2 style="color: crimson;">Syntax to Declare a 2DArray in java :</h2>
+    <ul>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType[][] arr;
+            </code></pre>
+        </li>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType [][]arr;
+            </code></pre>
+        </li>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType arr[][];
+            </code></pre>
+        </li>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType []arr[];
+            </code></pre>
+        </li>
+    </ul>
+
+    <h2 style="color: crimson;">Instantiation of an Array in java :</h2>
+    <pre style="width: 10cm;"><code>
+        int[][] arr=new int[3][3];
+    </code></pre>
+
+    <h1 style="color:chartreuse;">Example of Two dimensional java array</h1>
+    <pre style="width: 15cm;"><code>
+    class Testarray{
+        public static void main(String args[]){ 
+            //declaring and initializing 2D array
+            int arr[][]={{1,2,3},{2,4,5},{4,4,5}};
+
+            for(int i=0;i<3;i++){
+                for(int j=0;j<3;j++){ 
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+</code></pre>
 
 
-    <a href="#Top">
-        <button class="btn btn-primary btn-xl">
-            Go to the top
-        </button>
-    </a>
+    <br>
+    <hr>
+    <br>
+
+    <h1>What is the class name of java array ?</h1>
+    <p>
+        In java, array is an object. For array object, an proxy
+        class is created whose name can be obtained by
+        .getClass() .getName() method on the object.
+    </p>
+    <br>
+    <pre style="width: 15cm;"><code>
+    class Testarray{
+        public static void main(String args[]){
+            int arr[]={4,4,5};
+            Class c=arr.getClass();
+            String name=c.getName();
+            System.out.println(name);
+        }
+    }
+
+</code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 6cm;"><code style="color: white;">
+        Output: 1
+    </code></pre>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="copying-a-array">Copying a java array :</h1>
+    <h2 style="color: crimson;">Syntax of arraycopy method :</h2>
+    <pre style="width: 25cm;"><code>
+            public static void arraycopy(Object src, int srcPos,Object dest, int destPos, int length )
+        </code></pre>
+
+    <p>eg :-</p>
+    <pre style="width: 15cm;"><code>
+    class TestArrayCopyDemo {
+        public static void main(String[] args) {
+            char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
+                                'i', 'n', 'a', 't', 'e', 'd' };
+            char[] copyTo = new char[7];
+            System.arraycopy(copyFrom, 2, copyTo, 0, 7);
+            System.out.println(new String(copyTo));
+        }
+    }
+    
+    </code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 9cm;"><code style="color: white;">
+            Output: caffein
+        </code></pre>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <footer>
+        <a href="#Top">
+            <button class="btn btn-primary btn-xl">
+                Go to the top
+            </button>
+        </a>
+    </footer>
 </body>
 
 </html>
