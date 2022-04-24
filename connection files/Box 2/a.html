@@ -1,114 +1,183 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Document</title>
-    <style>
-        body {
-            background-color: cadetblue;
-        }
-
-        pre {
-            margin: 0 20%;
-            background-color: rgb(75, 67, 67);
-            border: 1px solid rgb(95, 65, 65);
-            display: block;
-            height: 250px;
-            width: 650px;
-        }
-
-        code {
-            font-size: 1rem;
-            color: rgb(90, 216, 216);
-        }
-
-        .btn {
-            font-weight: 700;
-            border-radius: 300px;
-            text-transform: uppercase;
-        }
-
-        .btn-primary {
-            background-color: #f05f44;
-            border-color: #f05f44;
-        }
-
-        .btn-primary:hover {
-            background-color: #ee4b08;
-            border-color: #ee4b08;
-            border-width: 4px;
-        }
-
-        .btn-xl {
-            padding: 1rem 2rem;
-            bottom: 20%;
-        }
-    </style>
+    <title>Command Line</title>
+    <link rel="stylesheet" href="a.style.css">
 </head>
 
 <body>
-    <a href="../../index.html" target="home">
+    <a href="../../index.html#Content" target="home">
         <button class="btn btn-primary btn-xl">to home Page</button>
     </a>
-    <h1 id="top">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+    <h1 class="title">Command line</h1>
+
+    <p>Java command-line argument is an argument i.e. passed at the time of running the Java program. In command-line,
+        the
+        arguments passed from the console can be received in the java program and it can be used as an input. The users
+        can pass
+        the arguments during the execution bypassing the command-line arguments inside the main() method.
+    </p>
+    <p>
+        We need to pass the arguments as space-separated values. We can pass both strings and primitive data types(int,
+        double,
+        float, char, etc) as command-line arguments. These arguments convert into a string array and are provided to the
+        main()
+        function as a string array argument.
+    </p>
+    <p>
+        When command-line arguments are supplied to JVM, JVM wraps these and supplies them to args[]. It can be
+        confirmed that
+        they are actually wrapped up in an args array by checking the length of args using args.length.
+    </p>
+    <p>Internally, JVM wraps up these command-line arguments into the args[ ] array that we pass into the main()
+        function. We
+        can check these arguments using args.length method. JVM stores the first command-line argument at args[0], the
+        second at
+        args[1], the third at args[2], and so on.</p>
+
+
+
+
+
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h2 id="printing-all-value">Example of command-line argument that prints all the values</h2>
+    <p>In this example, we are printing all the arguments passed from the command-line. For this purpose, we have
+        traversed the
+        array using for loop.</p>
+    <pre style="width: 15cm;"><code>
+    class CommandLine{
+        public static void main(String args[]){
+            for(int i=0;i<(args.length);i++){
+                System.out.println("args["+i+"]: "+args[i]);
+            }
         }
     }
-</code></pre>
-    <h1 id="2">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
+</code></pre>
+    <br>
+    <h2 id="steps">Steps to Run the Above Program:</h2>
+    <p>To compile and run a java program in the command prompt, follow the steps written below.</p>
+    <ul>
+        <li>
+            Save the program as CommandLine.java
+        </li>
+        <li>
+            Open the command prompt window and compile the program javac CommandLine.java
+        </li>
+        <li>
+            After a successful compilation of the program, run the following command by writing the arguments- java
+            CommandLine
+        </li>
+        <li>
+            For example - java CommandLine this is a test
+        </li>
+        <li>
+            Press Enter and you will get the desired output.
+        </li>
+    </ul>
+    <pre style="background-color: black;width: 15cm;"><code style="color: white;">
+        Command line: javac CommandLine.java
+                      java CommandLine this is a test
+        Output: args[0]: this
+                args[1]: is
+                args[2]: a
+                args[3]: test
+
+    </code></pre>
+
+    <div style="color:crimson ;">
+        <h2>Note:-</h2>
+        <ul>
+            <li style="list-style: none;">
+                <p>All command-line arguments are passed as strings</p>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="Passing-numeric">Passing Numeric Command-Line Arguments</h1>
+    <p>The <b><i>main()</i></b> method of every Java program only accepts string arguments. Hence it is not possible to
+        pass numeric arguments through the command line.</p>
+    <p>However, we can later convert string arguments into numeric values.</p>
+
+    <h2>Example: Numeric Command-Line Arguments</h2>
+    <pre style="width: 15cm;"><code>
+    class Main {
         public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+    
+            for(String str: args) {
+            // convert into integer type
+                int argument = Integer.parseInt(str);
+                System.out.println("Argument in integer form: " + argument);
+            }
+    
         }
     }
-</code></pre>
-    <h1 id="3">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
 </code></pre>
-    <h1 id="topic 4">Here is an example of the HTML we put in our page to show it:</h1>
+    <br>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
+    <pre style="background-color: black;width: 11cm;"><code style="color: white;">
+        Command line: javac Main.java
+                      java Main 11 23
+        Output: Arguments in integer form
+                11
+                23
+
+    </code></pre>
+
+    <p>In the above example, notice the line</p>
+    <pre style="background-color: black;width: 12cm;"><code style="color: white;">
+        int argument = Intege.parseInt(str);
+
+    </code></pre>
+
+    <p>Here, the <b><i>parseInt()</i></b> method of the <b><i>Integer</i></b> class converts the string argument into an
+        integer. </p>
+    <p> Similarly, we can use the <b><i>parseDouble()</i></b> and <b><i>parseFloat()</i></b> method to convert the
+        string into <b><i>double</i></b> and <b><i>float</i></b>
+        respectively.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="argc-vs-argv">argc and argv</h2>
+    <ul>
+        <li>
+            When the program is called from the command line
+            with arguments, argc will contain the number of
+            arguments.
+        </li>
+        <li>
+            When the user types in arguments, the user
+            separates each argument with a space.
+        </li>
+        <li>
+            argv is an array of character strings.
+        </li>
+        <li>
+            argv1 is the character string containing the
+            first argument, argv2 the second, etc.
+        </li>
+        <li>
+            Note argv0 contains the character string that
+            is the name of the executable.
+        </li>
+    </ul>
+
+    <br><br>
+    </code></pre>
     <a href="#Top">
         <button class="btn btn-primary btn-xl">
             Go to the top
