@@ -1,0 +1,65 @@
+body {
+  background-color: cadetblue;
+  margin: 1cm;
+}
+
+pre {
+  display: block;
+  margin: 0 20%;
+  background-color: rgb(75, 67, 67);
+  border: 2px solid black;
+  height: fit-content;
+  width: max-content;
+}
+
+pre:hover {
+  transition: scale(1.1);
+}
+
+code {
+  font-size: 1rem;
+  color: rgb(90, 216, 216);
+}
+
+p {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 300px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #f05f44;
+  border-color: #f05f44;
+}
+
+.btn-primary:hover {
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+  bottom: 20%;
+}
+
+.Title {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+p {
+  font-size: 2rem;
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
