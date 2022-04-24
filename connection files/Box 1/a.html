@@ -9,71 +9,100 @@
     <a href="../../index.html" target="home">
         <button class="btn btn-primary btn-xl">to home Page</button>
     </a>
-    <h1 id="top">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre class="first"><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+    <h1 class="Title">Array in Java</h1>
+    <p>Normally, array is a collection of similar type of elements
+        that have contiguous memory location.
+    </p>
+    <p>Java array is an object the contains elements of similar
+        data type. It is a data structure where we store similar
+        elements. We can store only fixed set of elements in a java
+        array.
+    </p>
+    <p> Array in java is index based, first element of the array is
+        stored at 0 index.
+    </p>
+    <hr>
 
-            System.out.println(a+b+c);
-            System.out.println(a+b+c);
-            System.out.println(a+b+c);
+    <h1>Advantages of Java Array</h1>
+    <ul>
+        <li>
+            <p>Code Optimization: It makes the code optimized, we
+                can retrieve or sort the data easily.</p>
+        </li>
+        <li>
+            <p>Random access: We can get any data located at any
+                index position.</p>
+        </li>
+    </ul>
 
+    <h1>Disadvantages of Java Array</h1>
+    <ul>
+        <li>
+            <p>Size Limit: We can store only fixed size of elements in the
+                array. It doesn't grow its size at runtime. To solve this
+                problem, collection framework is used in java.</p>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h1>Single Dimensional Array in Java (1-Dimensional Array)</h1>
+
+    <h2 style="color: crimson;">Syntax to Declare an Array in java :</h2>
+    <ul>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType[] arr;
+            </code></pre>
+        </li>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType []arr;
+            </code></pre>
+        </li>
+        <li>
+            <pre style="width: 10cm;"><code>
+                dataType arr[];
+            </code></pre>
+        </li>
+    </ul>
+
+    <h2 style="color: crimson;">Instantiation of an Array in java :</h2>
+    <pre style="width: 10cm;"><code>
+        arr=new datatype[size];
+    </code></pre>
+
+    <h1 style="color:chartreuse;">Example of single dimensional java array</h1>
+    <p>eg 1:-</p>
+    <pre style="width: 15cm;"><code>
+    class Testarray{
+        public static void main(String args[]){
+            int a[]=new int[5];//declaration and instantiation
+            a[0]=10;//initialization
+            a[1]=20;
+            a[2]=70;
+            a[3]=40;
+            a[4]=50;
+            for(int i=0;i<(a.length);i++)
+            System.out.println(a[i]); 
         }
     }
 </code></pre>
-    <h1 id="2">Here is an example of the HTML we put i fdgfgn our page to show it:</h1>
-
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+    <p>eg 2:-</p>
+    <pre style="width: 20cm;"><code>
+    class Testarray1{
+        public static void main(String args[]){
+            int a[]={33,3,4,5};  //declaration, instantiation and initialization
+            for(int i=0;i<(a.length);i++)
+            System.out.println(a[i]); 
         }
     }
 </code></pre>
-    <h1 id="3">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
-    <h1 id="topic 4">Here is an example of the HTML we put in our page to show it:</h1>
+    <hr>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
+
     <a href="#Top">
         <button class="btn btn-primary btn-xl">
             Go to the top
