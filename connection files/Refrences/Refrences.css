@@ -1,0 +1,95 @@
+body {
+  margin: 0 auto;
+  font-family: Arial;
+  background-color: cadetblue;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 300px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #f05f44;
+  border-color: #f05f44;
+}
+
+.btn-primary:hover {
+  background-color: #ee4b08;
+  border-color: #ee4b08;
+  border-width: 4px;
+}
+
+.btn-xl {
+  margin-top: 3mm;
+  margin-left: 3mm;
+  padding: 1rem 2rem;
+  bottom: 20%;
+  margin-bottom: 3mm;
+}
+
+.btt {
+  background-color: rgb(196, 40, 196);
+}
+
+.btt:hover {
+  background-color: darkmagenta;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(700px, 2fr));
+  grid-gap: 20px;
+}
+
+.box {
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  width: auto;
+  border: 12px solid black;
+  border-radius: 4px;
+  background-color: rgb(105, 154, 247);
+  text-align: start;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.img-logo {
+  border-radius: 0.5cm;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  width: 1cm;
+  height: 1cm;
+}
+.img-logo:hover {
+  transform: scale(1.2);
+}
+
+li {
+  padding: 20px;
+  list-style: none;
+  font-size: x-large;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 0px;
+  padding: 10px;
+  border: 10px solid rgb(0, 0, 0);
+}
+
+.refrence {
+  list-style: lower-roman;
+}
+
+h2 {
+  font-size: 25px;
+}
