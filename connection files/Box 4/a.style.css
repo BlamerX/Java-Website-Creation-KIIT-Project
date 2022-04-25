@@ -63,3 +63,26 @@ h2 {
 h1 {
   font-size: 3rem;
 }
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 30px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #757373;
+}
+tr:hover {
+  background-color: #000000;
+  color: #ee4b08;
+}
+
+table {
+  margin: 0% 20%;
+  width: 60%;
+}

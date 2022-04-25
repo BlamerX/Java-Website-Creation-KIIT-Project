@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Buffer Class Reader</title>
+    <link rel="stylesheet" href="a.style.css">
+</head>
+
+<body>
+    <a href="../../index.html#Content" target="home">
+        <button class="btn btn-primary btn-xl">to home Page</button>
+    </a>
+
+    <h1 class="title">Java Reader Class</h1>
+    <p>The Reader class of the java.io package is an abstract superclass that represents a stream of characters.</p>
+    <p>Since Reader is an abstract class, it is not useful by itself. However, its subclasses can be used to read data.
+    </p>
+    <p>Java Reader is an abstract class for reading character streams. The only methods that a subclass must implement
+        are
+        read(char[], int, int) and close(). Most subclasses, however, will override some of the methods to provide
+        higher
+        efficiency, additional functionality, or both.</p>
+    <p>
+        Some of the implementation class are <i>BufferedReader, CharArrayReader, FilterReader, InputStreamReader,
+            PipedReader,
+            StringReader</i>
+    </p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="subclasses">Subclasses of Reader</h2>
+    <p>In order to use the functionality of Reader, we can use its subclasses. Some of them are:</p>
+    <ul>
+        <li>BufferedReader</li>
+        <li>InputStreamReader</li>
+        <li>FileReader</li>
+        <li>StringReader</li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="creating-reader">Create a Reader</h2>
+    <p>In order to create a Reader, we must import the java.io.Reader package first. Once we import the package, here is
+        how we
+        can create the reader.</p>
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+        // Creates a Reader
+        Reader input = new FileReader();
+                        
+                            </code></pre>
+    <p>Here, we have created a reader using the FileReader class. It is because Reader is an abstract class. Hence we
+        cannot
+        create an object of Reader.</p>
+
+    <p style="color: crimson;">Note: We can also create readers from other subclasses of Reader.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="field">Fileds</h2>
+
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Modifier and Type</b></th>
+            <th><b>Field</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>protected Object</th>
+            <th>lock</th>
+            <th>The object used to synchronize operations on this stream.</th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h2 id="constructor">Contructor</h2>
+
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Modifier</b></th>
+            <th><b>Constructor</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>protected</th>
+            <th>Reader()</th>
+            <th>It creates a new character-stream reader whose critical sections will synchronize on the reader itself.
+            </th>
+        </tr>
+        <tr>
+            <th>protected</th>
+            <th>Reader(Object lock)</th>
+            <th>It creates a new character-stream reader whose critical sections will synchronize on the given object.
+            </th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h2 id="method">Methods</h2>
+    <p>The Reader class provides different methods that are implemented by its subclasses. Here are some of the commonly
+        used
+        methods:</p>
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Modifier and Type</b></th>
+            <th><b>Methods</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>abstract void</th>
+            <th>close()</th>
+            <th>It closes the stream and releases any system resources associated with it.</th>
+        </tr>
+        <tr>
+            <th>void</th>
+            <th>mark(int readAheadLimit)</th>
+            <th>It marks the present position in the stream.</th>
+        </tr>
+        <tr>
+            <th>boolean</th>
+            <th>markSupported()</th>
+            <th>It tells whether this stream supports the mark() operation.</th>
+        </tr>
+        <tr>
+            <th>int</th>
+            <th>read()</th>
+            <th>It reads a single character.</th>
+        </tr>
+        <tr>
+            <th>int</th>
+            <th>read(char[] cbuf)</th>
+            <th>It reads characters into an array.</th>
+        </tr>
+        <tr>
+            <th>abstract int</th>
+            <th>read(char[] cbuf, int off, int len)</th>
+            <th>It reads characters into a portion of an array.</th>
+        </tr>
+        <tr>
+            <th>int</th>
+            <th>read(CharBuffer target)</th>
+            <th>It attempts to read characters into the specified character buffer.</th>
+        </tr>
+        <tr>
+            <th>boolean</th>
+            <th>ready()</th>
+            <th>It tells whether this stream is ready to be read.</th>
+        </tr>
+        <tr>
+            <th>void</th>
+            <th>reset()</th>
+            <th>It resets the stream.</th>
+        </tr>
+        <tr>
+            <th>long</th>
+            <th>skip(long n)</th>
+            <th>It skips characters.</th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <p>eg :-</p>
+    <pre style="width: 20cm;"><code>
+        import java.io.*;
+        public class ReaderExample {
+            public static void main(String[] args) {
+                try {
+                    Reader reader = new FileReader("file.txt");
+                    int data = reader.read();
+                    while (data != -1) {
+                    System.out.print((char) data);
+                    data = reader.read();
+                }
+                reader.close();
+                } catch (Exception ex) {
+                    System.out.println(ex.getMessage());
+                }
+            }
+        }
+                
+                </code></pre>
+    <br>
+
+    <p>file.txt</p>
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+        I am inside a file
+                
+                    </code></pre>
+    <br>
+    <p>Output</p>
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+        I am inside a file
+                
+                    </code></pre>
+    <br>
+    <hr>
+    <br>
+
+
+    <br>
+    <a href="#Top">
+        <button class="btn btn-primary btn-xl">
+            Go to the top
+        </button>
+    </a>
+</body>
+
+</html>

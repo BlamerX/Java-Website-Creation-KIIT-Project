@@ -116,6 +116,11 @@ h3 {
   border-radius: 4px;
   border: 1px solid #bbb;
 }
+.topic5 {
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
 
 .main-topic {
   padding: 40px;
@@ -152,7 +157,7 @@ code {
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
-  grid-gap: 100px;
+  grid-gap: 20px;
   align-items: center;
   justify-items: center;
 }
