@@ -9,66 +9,290 @@
     <a href="../../index.html#Content" target="home">
         <button class="btn btn-primary btn-xl">to home Page</button>
     </a>
-    <h1 id="top">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
-    <h1 id="2">Here is an example of the HTML we put in our page to show it:</h1>
+    <h1 class="title">Java User Input (Scanner)</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
-    <h1 id="3">Here is an example of the HTML we put in our page to show it:</h1>
+    <p>Scanner is a class in java.util package used for obtaining the input of the primitive types like int, double,
+        etc. and
+        strings. It is the easiest way to read input in a Java program, though not very efficient if you want an input
+        method
+        for scenarios where time is a constraint like in competitive programming.</p>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
-    <h1 id="topic 4">Here is an example of the HTML we put in our page to show it:</h1>
+    <ul>
+        <li>
+            <p>To create an object of Scanner class, we usually pass the predefined object System.in, which represents
+                the standard
+                input stream. We may pass an object of class File if we want to read input from a file.</p>
+        </li>
+        <li>
+            <p>To read numerical values of a certain data type XYZ, the function to use is nextXYZ(). For example, to
+                read a value of
+                type short, we can use nextShort()</p>
+        </li>
+        <li>
+            <p>To read strings, we use nextLine().</p>
+        </li>
+        <li>
+            <p>To read a single character, we use next().charAt(0). next() function returns the next token/word in the
+                input as a
+                string and charAt(0) function returns the first character in that string.</p>
+        </li>
+    </ul>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
+    <h2 id="user-input">Java User Input</h2>
+    <p>The <b><i>Scanner</i></b> class is used to get user input, and it is found in the <b><i>java.util</i></b>
+        package.</p>
+    <p>To use the <b><i>Scanner</i></b> class, create an object of the class and use any of the available methods found
+        in the <b><i>Scanner</i></b>
+        class
+        documentation. In our example, we will use the <b><i>nextLine()</i></b> method, which is used to read Strings:
+    </p>
+
+    <h2>Let us look at the code snippet to read data of various data types.</h2>
+
+    <pre style="width: 20cm;"><code>
+        import java.util.Scanner;
+        public class ScannerDemo1{
+            public static void main(String[] args){
         
-            a.area();
-            b.area();
-            c.area();
+                Scanner sc = new Scanner(System.in);
+        
+                // String input
+                String name = sc.nextLine();
+        
+                // Character input
+                char gender = sc.next().charAt(0);
+        
+                // Numerical data input
+                // byte, short and float can be read
+                // using similar-named functions.
+                int age = sc.nextInt();
+                long mobileNo = sc.nextLong();
+                double cgpa = sc.nextDouble();
+        
+                // Print the values to check if the input was correctly obtained.
+                System.out.println("Name: "+name);
+                System.out.println("Gender: "+gender);
+                System.out.println("Age: "+age);
+                System.out.println("Mobile Number: "+mobileNo);
+                System.out.println("CGPA: "+cgpa);
+            }
         }
-    }
-</code></pre>
+    
+    </code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+            Input: Name1
+                   F
+                   40
+                   9876543210
+                   9.9
+            Output: Name: Name1
+                    Gender: F
+                    Age: 40
+                    Mobile Number: 9876543210
+                    CGPA: 9.9
+    
+        </code></pre>
+
+    <br>
+    <hr><br>
+
+    <h2 id="Input-Types">Input Types</h2>
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Method</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th><i>nextBoolean()</i></th>
+            <th>Reads a <b><i>boolean</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextByte()</i></th>
+            <th>Reads a <b><i>byte</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextDouble()</i></th>
+            <th>Reads a <b><i>double</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextFloat()</i></th>
+            <th>Reads a <b><i>float</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextInt()</i></th>
+            <th>Reads a <b><i>int</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextLine()</i></th>
+            <th>Reads a <b><i>String</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextLong()</i></th>
+            <th>Reads a <b><i>long</i></b> value from user</th>
+        </tr>
+        <tr>
+            <th><i>nextShort()</i></th>
+            <th>Reads a <b><i>short</i></b> value from user</th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="bisinteger-bigdecimal">Java Scanner with BigInteger and BigDecimal</h2>
+    <p>Java scanner can also be used to read the big integer and big decimal numbers.</p>
+    <ul>
+        <li>
+            <p><b><i>nextBigInteger()</i></b>- reads the big integer value from the user</p>
+        </li>
+        <li>
+            <p><b><i>nextBigDecimal()</i></b>- reads the big decimal value from the user</p>
+        </li>
+    </ul>
+    <p>Example of Read BigInteger and BigDecimal</p>
+
+    <pre style="width: 20cm;"><code>
+        import java.math.BigDecimal;
+        import java.math.BigInteger;
+        import java.util.Scanner;
+        
+        class Main {
+            public static void main(String[] args) {
+        
+                // creates an object of Scanner
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter a big integer: ");
+        
+                // reads the big integer
+                BigInteger value1 = input.nextBigInteger();
+                System.out.println("Using nextBigInteger(): " + value1);
+        
+                System.out.print("Enter a big decimal: ");
+        
+                // reads the big decimal
+                BigDecimal value2 = input.nextBigDecimal();
+                System.out.println("Using nextBigDecimal(): " + value2);
+        
+                input.close();
+            }
+        }
+        
+        </code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+        Output: Enter a big integer: 987654321
+                Using nextBigInteger(): 987654321
+                Enter a big decimal: 9.55555
+                Using nextBigDecimal(): 9.55555
+        
+            </code></pre>
+
+    <br>
+    <hr><br>
+
+    <h2 id="working-of-java-scanner">Working of Java Scanner</h2>
+    <p>The <b><i>Scanner</i></b> class reads an entire line and divides the line into tokens. Tokens are small elements
+        that have some
+        meaning to the Java compiler. For example,</p>
+
+    <p>
+        Suppose there is an input string:
+    </p>
+    <pre style="background-color: rgb(0, 0, 0);width: 7cm;"><code>
+        He is 22
+        
+        </code></pre>
+
+    <p>In this case, the scanner object will read the entire line and divides the string into tokens: "<b>He</b>",
+        "<b>is</b>" and
+        "<b>22</b>". The
+        object then iterates over each token and reads each token using its different methods.</p>
+
+    <p style="color: rgb(187, 49, 77);"><b> Note: By default, whitespace is used to divide tokens.</b></p>
+
+    <br>
+    <hr><br>
+
+    <h2 id="string-tokenization">String Tokenization using the Scanner class</h2>
+    <p>Java Scanner class is also used to parse the string into tokens and perform operations on them. There are some
+        useful
+        methods provided by the Scanner class to do this. These methods are:</p>
+
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Method</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>Stream< String> tokens()</th>
+            <th>This method gives a stream of delimiter-separated tokens from the Scanner object which is in use.</th>
+        </tr>
+        <tr>
+            <th>String toString()</th>
+            <th>This method returns the string representation of Scanner using.</th>
+        </tr>
+        <tr>
+            <th>Scanner useDelimiter()</th>
+            <th>This method sets the delimiting pattern of the Scanner which is in use to the specified pattern.</th>
+        </tr>
+        <tr>
+            <th>void close()</th>
+            <th>This method closes this scanner.</th>
+        </tr>
+    </table>
+
+    <p>eg :-</p>
+    <pre style="width: 20cm;"><code>
+        import java.util.Scanner;
+
+        public class ScannerTokens1 {
+            public static void main(String args[]) {
+                String s = "Made%By%Members%of%Group%6";
+
+                //Initialize Scanner object
+                Scanner sc = new Scanner(s);
+
+                //Initialize the string delimiter
+                sc.useDelimiter("%");
+
+                //Prints stream of delimiter-separated tokens
+                sc.tokens();
+
+                //Printing the tokenized Strings
+                while (sc.hasNext()) {
+                    System.out.println(sc.next());
+                }
+
+                sc.close();
+            }
+        }
+            
+            </code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+            Output: Made
+                    By
+                    Members
+                    of
+                    Group
+                    6
+            
+                </code></pre>
+
+    <br>
+    <hr>
+    <br>
+
+    <br><br>
+
+
+    </code></pre>
     <a href="#Top">
         <button class="btn btn-primary btn-xl">
             Go to the top

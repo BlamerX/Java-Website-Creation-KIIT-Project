@@ -9,66 +9,267 @@
     <a href="../../index.html#Content" target="home">
         <button class="btn btn-primary btn-xl">to home Page</button>
     </a>
-    <h1 id="top">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
-        }
-    }
-</code></pre>
-    <h1 id="2">Here is an example of the HTML we put in our page to show it:</h1>
+    <h1 class="title">Buffer Class Reader</h1>
+    <p>The BufferedReader class of Java is used to read the stream of characters from the specified source
+        (character-input
+        stream). The constructor of this class accepts an InputStream object as a parameter.</p>
+    <p>This class provides a method named <b><i>read()</i></b> and <b><i>readLine()</i></b> which reads and returns the
+        character and next line from
+        the
+        source (respectively) and returns them.</p>
+    <ul>
+        <li>Instantiate an <b>InputStreamReader</b> class bypassing your InputStream object as a parameter.</li>
+        <li>Then, create a BufferedReader, bypassing the above obtained InputStreamReader object as a parameter.</li>
+        <li>Now, read data from the current reader as String using the readLine() or read() method.</li>
+    </ul>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+    <p>eg :-</p>
+    <pre style="width: 23cm;"><code>
+        import java.io.BufferedReader;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+        class Employee{
+            String name;
+            int id;
+            int age;
+            Employee(String name, int age, int id){
+                this.name = name;
+                this.age = age;
+                this.id = id;
+            }
+            public void displayDetails(){
+                System.out.println("Name: "+this.name);
+                System.out.println("Age: "+this.age);
+                System.out.println("Id: "+this.id);
+            }
         }
-    }
-</code></pre>
-    <h1 id="3">Here is an example of the HTML we put in our page to show it:</h1>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
-        
-            a.area();
-            b.area();
-            c.area();
+        public class ReadData {
+            public static void main(String args[]) throws IOException {
+                BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
+                System.out.println("Enter your name: ");
+                String name = reader.readLine();
+                System.out.println("Enter your age: ");
+                int age = Integer.parseInt(reader.readLine());
+                System.out.println("Enter your Id: ");
+                int id = Integer.parseInt(reader.readLine());
+                Employee std = new Employee(name, age, id);
+                std.displayDetails();
+            }
         }
-    }
-</code></pre>
-    <h1 id="topic 4">Here is an example of the HTML we put in our page to show it:</h1>
+                
+                </code></pre>
+    <br>
 
-    <pre><code>
-    public class L5q1 {
-        public static void main(String[] args) {
-            x1 a = new x1();
-            x2 b = new x2();
-            x3 c = new x3();
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+                Input:  Enter your name:
+                        Krishna
+                        Enter your age:
+                        25
+                        Enter your Id:
+                        1233
+                Output: Name: Krishna
+                        Age: 25
+                        Id: 1233
+                
+                    </code></pre>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="constructor">Java BufferedReader class constructors</h2>
+
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Constructor</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>BufferedReader(Reader rd)</th>
+            <th>It is used to create a buffered character input stream that uses the default size for an input buffer.
+            </th>
+        </tr>
+        <tr>
+            <th>BufferedReader(Reader rd, int size)</th>
+            <th>It is used to create a buffered character input stream that uses the specified size for an input buffer.
+            </th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="method">Java BufferedReader class methods</h2>
+    <table>
+        <tr style="background-color: #04AA6D; color: white;">
+            <th><b>Method</b></th>
+            <th><b>Description</b></th>
+        </tr>
+        <tr>
+            <th>int read()</th>
+            <th>It is used for reading a single character.</th>
+        </tr>
+        <tr>
+            <th>int read(char[] cbuf, int off, int len)</th>
+            <th>It is used for reading characters into a portion of an array.
+            </th>
+        </tr>
+        <tr>
+            <th>boolean markSupported()</th>
+            <th>It is used to test the input stream support for the mark and reset method.</th>
+        </tr>
+        <tr>
+            <th>String readLine()</th>
+            <th>It is used for reading a line of text.</th>
+        </tr>
+        <tr>
+            <th>boolean ready()</th>
+            <th>It is used to test whether the input stream is ready to be read.
+            </th>
+        </tr>
+        <tr>
+            <th>long skip(long n)</th>
+            <th>It is used for skipping the characters.</th>
+        </tr>
+        <tr>
+            <th>void reset()</th>
+            <th>It repositions the stream at a position the mark method was last called on this input stream.</th>
+        </tr>
+        <tr>
+            <th>void mark(int readAheadLimit)</th>
+            <th>It is used for marking the present position in a stream.</th>
+        </tr>
+        <tr>
+            <th>void close()</th>
+            <th>It closes the input stream and releases any of the system resources associated with the stream.</th>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <h2 id="working">Working of BufferedReader</h2>
+    <p>The BufferedReader maintains an internal <b> buffer of 8192 characters.</b></p>
+
+    <p>During the read operation in BufferedReader, a chunk of characters is read from the disk and stored in the
+        internal
+        buffer. And from the internal buffer characters are read individually.</p>
+    <p>Hence, the number of communication to the disk is reduced. This is why reading characters is faster using
+        BufferedReader.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 id="Scanner-vs-BuffredReader">Difference Between Scanner and BufferedReader Class in Java</h2>
+
+    <p>In Java, Scanner and BufferedReader class are sources that serve as ways of reading inputs. Scanner class is a
+        simple
+        text scanner that can parse primitive types and strings. It internally uses regular expressions to read
+        different types
+        while on the other hand BufferedReader class reads text from a character-input stream, buffering characters so
+        as to
+        provide for the efficient reading of the sequence of characters</p>
+    <p>The eccentric difference lies in reading different ways of taking input via the next() method that is justified
+        in the
+        below programs over the similar input set.</p>
+    <p>eg :-</p>
+    <pre style="width: 20cm;"><code>
+        import java.io.*;
         
-            a.area();
-            b.area();
-            c.area();
+        // Main class
+        class Main {
+        
+            // Main driver method
+            public static void main(String args[])throws IOException{
+        
+                // Creating object of class inside main() method
+                BufferedReader br = new BufferedReader(
+                new InputStreamReader(System.in));
+        
+                System.out.println("Enter an integer");
+        
+                // Taking integer input
+                int a = Integer.parseInt(br.readLine());
+        
+                System.out.println("Enter a String");
+        
+                String b = br.readLine();
+        
+                // Printing input entities above
+                System.out.printf("You have entered:- " + a + " and name as " + b);
+            }
         }
-    }
-</code></pre>
+                
+                </code></pre>
+    <br>
+
+    <pre style="background-color: black;width: 13cm;"><code style="color: white;">
+                Input:  Enter an Integer:
+                        3
+                        Enter a String:
+                        Person1
+            
+                Output: 3 and name is Person1
+                
+                    </code></pre>
+    <br>
+    <p><b> explanation:</b> In Scanner class if we call nextLine() method after any one of the seven nextXXX() method
+        then the
+        nextLine() does not read values from console and cursor will not come into console it will skip that step. The
+        nextXXX()
+        methods are <i>nextInt(), nextFloat(), nextByte(), nextShort(), nextDouble(), nextLong(), next().</i></p>
+    <p>In BufferReader class there is no such type of problem. This problem occurs only for the Scanner class, due
+        to
+        nextXXX()
+        methods ignoring newline character and nextLine() only reads till the first newline character. If we use one
+        more call
+        of nextLine() method between nextXXX() and nextLine(), then this problem will not occur because nextLine()
+        will
+        consume
+        the newline character.
+    </p>
+    <br>
+    <hr><br>
+
+    <h2>Following are the Major Differences between Scanner and BufferedReader Class in Java</h2>
+    <ul>
+        <li>
+            <p>BufferedReader is synchronous while Scanner is not. BufferedReader should be used if we are working with
+                multiple
+                threads.</p>
+        </li>
+        <li>
+            <p>BufferedReader has a significantly larger buffer memory than Scanner.</p>
+        </li>
+        <li>
+            <p>The Scanner has a little buffer (1KB char buffer) as opposed to the BufferedReader (8KB byte buffer), but
+                it’s more than
+                enough.</p>
+        </li>
+        <li>
+            <p>BufferedReader is a bit faster as compared to scanner because the scanner does the parsing of input data
+                and
+                BufferedReader simply reads a sequence of characters.</p>
+        </li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+
+
+    <br>
     <a href="#Top">
         <button class="btn btn-primary btn-xl">
             Go to the top
