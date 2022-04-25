@@ -56,7 +56,7 @@ To deploy this project run
 
 ## Screenshots 📸
 
-![Website Screenshot](https://github.com/BlamerX/Java-Website-Creation-KIIT-Project/blob/master/img/Sample.jpg)
+![Website Screenshot](https://github.com/BlamerX/Java-Website-Creation-KIIT-Project/blob/master/img/Sample2.jpg)
 ![Website Screenshot](https://github.com/BlamerX/Java-Website-Creation-KIIT-Project/blob/master/img/Sample1.jpg)
 
 <br><br>
